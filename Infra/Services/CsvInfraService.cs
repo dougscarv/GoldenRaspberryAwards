@@ -16,11 +16,11 @@ namespace GoldenRaspberryAwards.Infra.Services
 
         public async Task LoadMovieListCsv()
         {
-            var csvName = "movielist.csv";
+            var csvName = "movielist-integration-test.csv";
 
-            if (Directory.GetCurrentDirectory().Contains("Test"))
+            if (Directory.GetCurrentDirectory().Contains("GoldenRaspberryAwardsApi"))
             {
-                csvName = "movielist-integration-test.csv";
+                csvName = "movielist.csv";
             }
 
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", csvName);
